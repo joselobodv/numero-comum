@@ -8,12 +8,17 @@ process.stdin.on("data", function (data) {
     numero1 = input;
   } else {
     numero2 = input;
+
+    let i
+    let maoir
+
     if(numero1 > numero2){
       i = numero1
     }else{
       i = numero2
+      maior = numero2
     }
-    for(input; i <= numero1 * numero2; i++){
+    for(i; i <= numero1 * numero2; i +=  maior){
       if(i% numero1 == 0  && i % numero2 == 0){
         console.log("MMC: " + i)
         break;
